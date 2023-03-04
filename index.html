@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al-universe-hub</title>
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .color-primary {
+          color: #585858;
+        }
+      }
+      @layer utilities {
+        .font-work-s {
+          font-family: "Work Sans", sans-serif;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-12 font-work-s" onload="fetchData()">
+    <!-- Header Section Start -->
+    <header>
+      <h1 class="text-black font-semibold text-3xl text-center mb-8">
+        AI Universe Hub
+      </h1>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Section Start -->
+    <main>
+      <!-- Data Sorting Button -->
+      <div class="text-center">
+        <button class="btn btn-error mb-12 text-white">Sort By Date</button>
+      </div>
+      <!-- Card Container -->
+      <div id="cardContainer" class="grid grid-cols-3 gap-5"></div>
+
+      <!-- Show More Button -->
+      <div class="text-center">
+        <button
+          onclick="showMore()"
+          class="btn btn-error mb-12 text-white mt-12"
+        >
+          Show More
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <!-- The button to open modal -->
+      <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+      <div class="modal">
+        <div id="cardModal" class="modal-box relative p-20 max-w-[90%]"></div>
+      </div>
+    </main>
+    <!-- Main Section End -->
+    <!-- Default JS -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
